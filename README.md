@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## A Star War
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use the [Star Wars API](https://swapi.dev/documentation ) to make a frontend application that is a list of the Star Wars films with an index page and film details page, using the URL and proper browser navigation.
 
-## Available Scripts
+### Index page (`/`)
 
-In the project directory, you can run:
+The index page should have a list of the films that shows:
 
-### `yarn start`
+- Name
+- Release date
+- Episode id
+- Director
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clicking on the name of the film will take you to the details page for that film
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Film detail page (`/films/:id`)
 
-### `yarn test`
+Should display details about a given film. The `id` should be the same as returned from the API (ex. `https://swapi.dev/api/films/1/` would be at `/films/1`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The page should show
 
-### `yarn build`
+- Film title
+- Episode id
+- Release date
+- Director
+- A list of characters in the film:
+  - Each character should list their name, mass, height, and name of homeworld  (ex. Luke Skywalker, 77kg, 172cm, Tatooine)
+  - The characters should be able to be sorted by any of the four attributes per film (default: name)
+- A sum of each species in the film (ex. Human: 8, Wookie: 3, ...)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Notes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Project should be delivered via a git repo (preferably via Github)
+ - Commit messages should be as if this were a real application with other developers involved
+ - `README` should be descriptive enough to run the application locally
+ - Data from API calls should be cached and considered stale after 5 minutes
+ - The app should have some minimal styling and thought toward design (css frameworks/etc allowed)
+ - Implement in whatever technology you are most comfortable
+ - Use of create-react-app or other boilerplate is encouraged
+ - Use of [SWAPI-Wrapper](https://github.com/cfjedimaster/SWAPI-Wrapper) is **NOT** acceptable.
+ - All routing should be client side with proper back/fwd browser navigation (using a routing lib is allowed)
+ - Use of other libs is allowed, but be prepared to justify the payload cost for the benefit
 
-### `yarn eject`
+## Bonus Points
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ - Having it statically deployed ([Vercel](<https://vercel.com/home>), [Surge](https://surge.sh), etc)
+ - Addressing web accessibility concerns
+ - Adding unit and/or integration tests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Anything not specified or ambiguous is left to your discretion. Please document any assumptions you make.
